@@ -8,11 +8,11 @@ public class Order {
     private int discountPrice;  // 할인 가격
 
     // 생성자
-    public Order(Long memberId, String itemName, int itemPrice, int dicountPrice) {
+    public Order(Long memberId, String itemName, int itemPrice, int discountPrice) {
         this.memberId = memberId;
         this.itemName = itemName;
         this.itemPrice = itemPrice;
-        this.discountPrice = dicountPrice;
+        this.discountPrice = discountPrice;
     }
 
     // 데이터 접근 및 설정
