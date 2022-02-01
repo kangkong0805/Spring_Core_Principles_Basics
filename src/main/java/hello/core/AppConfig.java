@@ -11,11 +11,11 @@ import hello.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+@Configuration  // 설정파일을 구성하기 위한 어노테이션
 public class AppConfig {
     /* 역할에 따른 구현 정리 */
 
-    @Bean
+    @Bean  // 메서드를 호출해서 반한된 객체를 스프링 컨테이너에 등록
     public MemberService memberService() {
         return new MemberServiceImpl(memberRepository());  // 회원 저장소 구현체를 생성자를 통해 주입(연결)
     }
