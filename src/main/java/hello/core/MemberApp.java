@@ -16,6 +16,7 @@ public class MemberApp {
         // ApplicationContext : 스프링 컨테이너
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
+        // getBean("찾으려는 객체 이름", 찾으려는 객체 타입) : 원하는 bean을 가져오기
         MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
 
         Member member = new Member(1L, "memberA", Grade.VIP);  // 회원생성
