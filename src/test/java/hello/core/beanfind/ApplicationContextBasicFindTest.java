@@ -12,30 +12,29 @@ import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ApplicationContextBasicFindTest {
-    AnnotationConfigApplicationContext ac = new
-            AnnotationConfigApplicationContext(AppConfig.class);
+    AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
     @Test
     @DisplayName("빈 이름으로 조회")
     void findBeanByName() {
-        MemberService memberService = ac.getBean("memberService",
-                MemberService.class);
+        // ac.getBean(빈이름, 타입)
+        MemberService memberService = ac.getBean("memberService", MemberService.class);
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
     }
     @Test
     @DisplayName("이름 없이 타입만으로 조회")
     void findBeanByType() {
+        // ac.getBean(빈이름, 타입)
         MemberService memberService = ac.getBean(MemberService.class);
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
     }
     @Test
     @DisplayName("구체 타입으로 조회")
     void findBeanByName2() {
-        MemberServiceImpl memberService = ac.getBean("memberService",
-                MemberServiceImpl.class);
+        MemberServiceImpl memberService = ac.getBean("memberService", MemberServiceImpl.class);
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
     }
     @Test
-    @DisplayName("빈 이름으로 조회X")
+    @DisplayName("빈 이름으로 조회 (X)")
     void findBeanByNameX() {
         //ac.getBean("xxxxx", MemberService.class);
         assertThrows(NoSuchBeanDefinitionException.class, () ->
