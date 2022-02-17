@@ -17,21 +17,25 @@ public class AppConfig {
 
     @Bean  // 메서드를 호출해서 반한된 객체를 스프링 컨테이너에 등록
     public MemberService memberService() {
+        System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());  // 회원 저장소 구현체를 생성자를 통해 주입(연결)
     }
 
     @Bean
     public MemberRepository memberRepository() {
+        System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
 
     @Bean
     public OrderService orderService() {
-        return new OrderServiceImpl(new MemoryMemberRepository(), discountPolicy());  // 회원 저장소 구현체와 할인 정책 구현체를 생성자를 통해 주입(연결)
+        System.out.println("call AppConfig.orderService");
+        return new OrderServiceImpl(memberRepository(), discountPolicy());  // 회원 저장소 구현체와 할인 정책 구현체를 생성자를 통해 주입(연결)
     }
 
     @Bean
     public DiscountPolicy discountPolicy() {
+//        return new FixDiscountPolicy();
         return new RateDiscountPolicy();
     }
 }
