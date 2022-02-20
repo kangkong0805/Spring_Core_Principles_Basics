@@ -11,7 +11,7 @@ import hello.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-//@Configuration  // 설정파일을 구성하기 위한 어노테이션
+@Configuration  // 설정파일을 구성하기 위한 어노테이션
 public class AppConfig {
     /* 역할에 따른 구현 정리 */
 
