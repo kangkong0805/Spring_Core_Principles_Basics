@@ -29,7 +29,8 @@ public class ComponentFilterAppConfigTest {
     @Configuration
     @ComponentScan(
             includeFilters = @Filter(type = FilterType.ANNOTATION, classes = MyIncludeComponent.class),
-            excludeFilters = @Filter(/*type = FilterType.(기본값 = ANNOTATION)*/classes = MyIncludeComponent.class)
+            //                       type = FilterType.(기본값 = ANNOTATION)
+            excludeFilters = @Filter(classes = MyExcludeComponent.class)
     )
     static class ComponentFilterAppConfig {
 
