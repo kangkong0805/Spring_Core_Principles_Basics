@@ -7,10 +7,10 @@ public class Member {
     private Grade grade;   // 등급
 
     // 생성자
-    public Member(Long id, String name, Grade gradle) {
+    public Member(Long id, String name, Grade gradee) {
         this.id = id;
         this.name = name;
-        this.grade = gradle;
+        this.grade = grade;
     }
 
     // 데이터 접근 및 설정
@@ -35,6 +35,6 @@ public class Member {
     }
 
     public void setGrade(Grade gradle) {
-        this.grade = gradle;
+        this.grade = grade;
     }
 }

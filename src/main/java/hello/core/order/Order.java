@@ -44,8 +44,8 @@ public class Order {
         return discountPrice;
     }
 
-    public void setDiscountPrice(int dicountPrice) {
-        this.discountPrice = dicountPrice;
+    public void setDiscountPrice(int discountPrice) {
+        this.discountPrice = discountPrice;
     }
 
     // 할인된 금액
@@ -60,7 +60,7 @@ public class Order {
                 "memberId=" + memberId +
                 ", itemName='" + itemName + '\'' +
                 ", itemPrice=" + itemPrice +
-                ", dicountPrice=" + discountPrice +
+                ", discountPrice=" + discountPrice +
                 '}';
     }
 }
