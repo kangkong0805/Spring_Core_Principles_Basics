@@ -45,4 +45,8 @@ public class NetworkClient{
         System.out.println("NetworkClient.destroy");
         disconnect();
     }
+
+    public void open() {
+        System.out.println("url = " + url);
+    }
 }
