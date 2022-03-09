@@ -39,4 +39,6 @@ public class PrototypeTest {
             System.out.println("true = " + true);
         }
     }
+
+
 }
