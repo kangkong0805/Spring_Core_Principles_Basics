@@ -1,6 +1,6 @@
 package hello.core.web;
 import hello.core.common.MyLogger;
-import hello.core.logdemo.LogDemoService;
+import hello.core.web.LogDemoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
